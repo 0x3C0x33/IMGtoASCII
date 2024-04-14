@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IMGtoASCII"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid Background="#FF212121">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtOut" Margin="356,10,10,12" TextWrapping="Wrap"/>
+        <Image x:Name="imgImagen" Margin="12,0,0,84" Height="197" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="332"/>
+        <Button Content="⚙️" HorizontalAlignment="Left" Height="29" Margin="10,12,0,0" VerticalAlignment="Top" Width="42" FontFamily="MS Gothic" FontSize="20" Foreground="#FF7100FF" BorderBrush="#00707070" Background="#00DDDDDD"/>
+        <Button x:Name="btnConvertToPNG" Content="  To PNG  " Margin="183,0,0,12" FontFamily="Jersey 10 Charted" FontSize="52" Background="#FF7100FF" BorderBrush="#FF7100FF" Foreground="White" HorizontalAlignment="Left" Width="168" Height="58" VerticalAlignment="Bottom" Click="btnConvertToPNG_Click"/>
+        <Button x:Name="btnGenerateHtml" Content="       Generate        &#xD;&#xA;          HTML            " Margin="10,0,0,12" FontFamily="Jersey 10 Charted" Background="#FF7100FF" BorderBrush="#FF7100FF" Foreground="White" HorizontalAlignment="Left" Width="168" Height="58" VerticalAlignment="Bottom" FontSize="27" Click="btnGenerateHtml_Click"/>
+        <Button x:Name="btnLoadImage" Content="                 Load Image                " Margin="57,12,0,0" FontFamily="Jersey 10 Charted" Background="#FF7100FF" BorderBrush="#FF7100FF" Foreground="White" HorizontalAlignment="Left" Width="294" FontSize="27" Height="29" VerticalAlignment="Top" Click="btnLoadImage_Click"/>
+        <Label x:Name="lblSizeFont" Content="Size Font:" HorizontalAlignment="Left" Margin="13,50,0,0" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" Width="84" FontSize="18" Height="32" VerticalAlignment="Top"/>
+        <Slider x:Name="sliSizeFont" HorizontalAlignment="Left" Margin="97,57,0,0" Width="208" Maximum="50" Minimum="1" Height="18" VerticalAlignment="Top" Value="12"/>
+        <Label x:Name="lblWidth" Content="Width:" HorizontalAlignment="Left" Margin="13,87,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" Height="32" Width="84" FontSize="18"/>
+        <Label x:Name="lblSizeFontPX" Content="12px" HorizontalAlignment="Left" Margin="310,50,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" Height="32" Width="41" FontSize="18"/>
+        <Label x:Name="lblSizeFontPX_Copiar" Content="characters" HorizontalAlignment="Left" Margin="230,87,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" Height="32" Width="121" FontSize="18"/>
+        <TextBox HorizontalAlignment="Left" Margin="97,92,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" Height="22" FontFamily="Bahnschrift SemiBold" FontSize="18" TextAlignment="Center" Background="#FF7100FF" BorderBrush="#FF7100FF" Foreground="White"/>
+        <Label x:Name="lblTextColour" Content="          Text Colour:" HorizontalAlignment="Left" Margin="13,124,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold Condensed" Foreground="White" Height="32" Width="148" FontSize="18"/>
+        <TextBox x:Name="clrTextColour" HorizontalAlignment="Left" Margin="166,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="32"/>
+        <Slider x:Name="sliTextColourR" HorizontalAlignment="Left" Margin="55,163,0,0" Width="296" Maximum="50" Minimum="1" Height="18" VerticalAlignment="Top" Value="12" Foreground="Red"/>
+        <Label x:Name="lblTextColourR" Content="Red" HorizontalAlignment="Left" Margin="15,156,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold Condensed" Foreground="Red" Height="32" Width="40" FontSize="18"/>
+        <Slider x:Name="sliTextColourR_Copiar" HorizontalAlignment="Left" Margin="55,195,0,0" Width="296" Maximum="50" Minimum="1" Height="18" VerticalAlignment="Top" Value="12" Foreground="Red"/>
+        <Label x:Name="lblTextColourR_Copiar" Content="Red" HorizontalAlignment="Left" Margin="15,188,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold Condensed" Foreground="Red" Height="32" Width="40" FontSize="18"/>
+        <Slider x:Name="sliTextColourR_Copiar1" HorizontalAlignment="Left" Margin="55,225,0,0" Width="296" Maximum="50" Minimum="1" Height="18" VerticalAlignment="Top" Value="12" Foreground="Red"/>
+        <Label x:Name="lblTextColourR_Copiar1" Content="Red" HorizontalAlignment="Left" Margin="15,218,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold Condensed" Foreground="Red" Height="32" Width="40" FontSize="18"/>
 
     </Grid>
 </Window>

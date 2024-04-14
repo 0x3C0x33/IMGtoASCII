@@ -16,6 +16,32 @@ namespace IMGtoASCII {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+            inicio();
+        }
+
+        private void inicio() {
+            this.Title = "Image to ASCII";
+            
+        }
+
+        private void btnLoadImage_Click(object sender, RoutedEventArgs e) {
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.FileName = "Image";
+
+            bool? result = dialog.ShowDialog();
+
+            if (result == true) {
+                string filename = dialog.FileName;
+                imgImagen.Source = new BitmapImage(new Uri(filename));
+            }
+        }
+
+        private void btnGenerateHtml_Click(object sender, RoutedEventArgs e) {
+            
+        }
+
+        private void btnConvertToPNG_Click(object sender, RoutedEventArgs e) {
+
         }
     }
 }
